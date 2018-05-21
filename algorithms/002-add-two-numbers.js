@@ -36,9 +36,12 @@
  */
 var addTwoNumbers = function(l1, l2) {
   var dummyHead = new ListNode(0);
-  var carry = 0, cur = dummyHead;
+  var cur = dummyHead;
+  var carry = 0;
+
   while (l1 || l2 || carry) {
-    var v1 = (v2 = 0);
+    var v1 = 0;
+    var v2 = 0;
     if (l1) {
       v1 = l1.val;
       l1 = l1.next;
@@ -52,5 +55,6 @@ var addTwoNumbers = function(l1, l2) {
     cur.next = new ListNode(sum % 10);
     cur = cur.next;
   }
+  
   return dummyHead.next;
 };
