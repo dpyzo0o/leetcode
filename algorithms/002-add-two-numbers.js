@@ -17,7 +17,7 @@
  *
  * Idea:
  *
- * Keep track of a carry when moving the pointer to next node. Using a dummy head
+ * Keep track of a carry when moving the pointer to next node. Use a dummy head
  * to hold the entire list and move the cur pointer each time to next node.
  *
  */
