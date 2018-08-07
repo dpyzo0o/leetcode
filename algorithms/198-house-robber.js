@@ -27,11 +27,14 @@
  *
  * Idea:
  *
- * Dynamic programming
+ * Approach 1: Dynamic programming
+ * Approach 2: Keep track of even and odd numbers. Key point is to assign the maximum sum
+ *             each time because you may skip two houses to get a better profit.
  *
  */
 
 /**
+ * approach 1
  * @param {number[]} nums
  * @return {number}
  */
@@ -49,4 +52,30 @@ var rob = function(nums) {
   }
 
   return dp[nums.length - 1];
+};
+
+/**
+ * approach 2
+ * @param {number[]} nums
+ * @return {number}
+ */
+var rob = function(nums) {
+  if (nums.length === 0) return 0;
+
+  if (nums.length === 1) return nums[0];
+
+  let even = 0;
+  let odd = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    if (i % 2 === 0) {
+      even += nums[i];
+      even = even > odd ? even : odd;
+    } else {
+      odd += nums[i];
+      odd = odd > even ? odd : even;
+    }
+  }
+
+  return even > odd ? even : odd;
 };
