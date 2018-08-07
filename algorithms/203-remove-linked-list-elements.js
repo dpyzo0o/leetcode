@@ -12,7 +12,8 @@
  *
  * Idea:
  *
- * Use dummy head
+ * Approach 1: use dummy head
+ * Approach 2: recursion
  *
  */
 
@@ -24,6 +25,7 @@
  * }
  */
 /**
+ * approach 1
  * @param {ListNode} head
  * @param {number} val
  * @return {ListNode}
@@ -44,4 +46,16 @@ var removeElements = function(head, val) {
   }
 
   return dummyHead.next;
+};
+
+/**
+ * approach 2
+ * @param {ListNode} head
+ * @param {number} val
+ * @return {ListNode}
+ */
+var removeElements = function(head, val) {
+  if (head === null) return null;
+  head.next = removeElements(head.next, val);
+  return head.val === val ? head.next : head;
 };
