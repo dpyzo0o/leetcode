@@ -41,14 +41,14 @@
  * @return {string}
  */
 var convertToTitle = function(n) {
-  const str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  let res = '';
+  const str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  let res = ''
 
   while (n > 0) {
-    n--;
-    res = str[n % 26] + res;
-    n = Math.floor(n / 26);
+    n--
+    res = str[n % 26] + res
+    n = Math.floor(n / 26)
   }
-  
-  return res;
-};
+
+  return res
+}

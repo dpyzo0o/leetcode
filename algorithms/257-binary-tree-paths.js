@@ -36,13 +36,13 @@
  * @return {string[]}
  */
 var binaryTreePaths = function(root) {
-  let res = [];
-  if (root !== null) dfs(root, '', res);
-  return res;
-};
+  let res = []
+  if (root !== null) dfs(root, '', res)
+  return res
+}
 
 const dfs = (node, path, arr) => {
-  if (node.left === null && node.right === null) arr.push(path + node.val);
-  if (node.left !== null) dfs(node.left, path + node.val + '->', arr);
-  if (node.right !== null) dfs(node.right, path + node.val + '->', arr);
-};
+  if (node.left === null && node.right === null) arr.push(path + node.val)
+  if (node.left !== null) dfs(node.left, path + node.val + '->', arr)
+  if (node.right !== null) dfs(node.right, path + node.val + '->', arr)
+}

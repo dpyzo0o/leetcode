@@ -26,21 +26,32 @@
  * @return {string[]}
  */
 var letterCombinations = function(digits) {
-  if (digits.length === 0) return [];
+  if (digits.length === 0) return []
 
-  let res = [''];
-  const charmap = ['0', '1', 'abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz'];
+  let res = ['']
+  const charmap = [
+    '0',
+    '1',
+    'abc',
+    'def',
+    'ghi',
+    'jkl',
+    'mno',
+    'pqrs',
+    'tuv',
+    'wxyz'
+  ]
 
   for (let i = 0; i < digits.length; i++) {
-    let temp = [];
-    let chars = charmap[digits[i]];
+    let temp = []
+    let chars = charmap[digits[i]]
     for (let j = 0; j < chars.length; j++) {
       for (let k = 0; k < res.length; k++) {
-        temp.push(res[k] + chars[j]);
+        temp.push(res[k] + chars[j])
       }
     }
-    res = temp;
+    res = temp
   }
 
-  return res;
-};
+  return res
+}

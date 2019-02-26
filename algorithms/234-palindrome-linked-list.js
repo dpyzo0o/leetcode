@@ -33,38 +33,38 @@
  * @return {boolean}
  */
 var isPalindrome = function(head) {
-  let fast = head;
-  let slow = head;
+  let fast = head
+  let slow = head
 
   while (fast !== null && fast.next !== null) {
-    fast = fast.next.next;
-    slow = slow.next;
+    fast = fast.next.next
+    slow = slow.next
   }
 
-  if (fast !== null) slow = slow.next;
+  if (fast !== null) slow = slow.next
 
-  slow = reverse(slow);
-  fast = head;
+  slow = reverse(slow)
+  fast = head
 
   while (slow !== null) {
-    if (slow.val !== fast.val) return false;
-    slow = slow.next;
-    fast = fast.next;
+    if (slow.val !== fast.val) return false
+    slow = slow.next
+    fast = fast.next
   }
 
-  return true;
-};
+  return true
+}
 
 const reverse = head => {
-  let cur = head;
-  let prev = null;
+  let cur = head
+  let prev = null
 
   while (cur !== null) {
-    let temp = cur.next;
-    cur.next = prev;
-    prev = cur;
-    cur = temp;
+    let temp = cur.next
+    cur.next = prev
+    prev = cur
+    cur = temp
   }
 
-  return prev;
-};
+  return prev
+}

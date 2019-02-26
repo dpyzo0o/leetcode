@@ -31,23 +31,23 @@
  * @return {string}
  */
 var countAndSay = function(n) {
-  if (n === 1) return "1";
+  if (n === 1) return '1'
 
-  var res = "1";
+  var res = '1'
   for (var i = 2; i <= n; i++) {
-    var count = 1;
-    var temp = "";
+    var count = 1
+    var temp = ''
     for (var j = 1; j < res.length; j++) {
       if (res[j] === res[j - 1]) {
-        count++;
+        count++
       } else {
-        temp += count + res[j - 1];
-        count = 1;
+        temp += count + res[j - 1]
+        count = 1
       }
     }
-    temp += count + res[j - 1];
-    res = temp;
+    temp += count + res[j - 1]
+    res = temp
   }
 
-  return res;
-};
+  return res
+}

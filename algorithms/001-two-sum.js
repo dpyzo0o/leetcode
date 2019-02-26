@@ -28,17 +28,17 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-  var map = new Map();
-  var result = [];
+  var map = new Map()
+  var result = []
 
   nums.some(function(el, idx) {
-    var complement = target - el;
+    var complement = target - el
     if (map.has(complement)) {
-      result = [map.get(complement), idx];
-      return true;
+      result = [map.get(complement), idx]
+      return true
     }
-    map.set(el, idx);
-  });
+    map.set(el, idx)
+  })
 
-  return result;
-};
+  return result
+}

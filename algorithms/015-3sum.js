@@ -27,31 +27,31 @@
  * @return {number[][]}
  */
 var threeSum = function(nums) {
-  nums.sort((a, b) => a - b);
+  nums.sort((a, b) => a - b)
 
-  let res = [];
+  let res = []
 
   for (let i = 0; i < nums.length - 2; i++) {
-    if (nums[i] > 0) return res;
-    if (nums[i] === nums[i - 1]) continue;
+    if (nums[i] > 0) return res
+    if (nums[i] === nums[i - 1]) continue
 
-    let left = i + 1;
-    let right = nums.length - 1;
-    let target = -nums[i];
+    let left = i + 1
+    let right = nums.length - 1
+    let target = -nums[i]
 
     while (left < right) {
-      let sum = nums[left] + nums[right];
+      let sum = nums[left] + nums[right]
       if (sum === target) {
-        res.push([nums[i], nums[left], nums[right]]);
-        while (nums[left] === nums[left + 1]) left++;
-        while (nums[right] === nums[right - 1]) right--;
-        left++;
-        right--;
+        res.push([nums[i], nums[left], nums[right]])
+        while (nums[left] === nums[left + 1]) left++
+        while (nums[right] === nums[right - 1]) right--
+        left++
+        right--
       }
-      if (sum > target) right--;
-      if (sum < target) left++;
+      if (sum > target) right--
+      if (sum < target) left++
     }
   }
 
-  return res;
-};
+  return res
+}

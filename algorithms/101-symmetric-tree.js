@@ -45,24 +45,24 @@
  * @return {boolean}
  */
 let isSymmetric = function(root) {
-  return isMirror(root, root);
-};
+  return isMirror(root, root)
+}
 
 let isMirror = function(t1, t2) {
   if (t1 === null && t2 === null) {
-    return true;
+    return true
   }
 
   if (t1 === null || t2 === null) {
-    return false;
+    return false
   }
 
   return (
     t1.val === t2.val &&
     isMirror(t1.left, t2.right) &&
     isMirror(t1.right, t2.left)
-  );
-};
+  )
+}
 
 /**
  * Iteration
@@ -70,30 +70,30 @@ let isMirror = function(t1, t2) {
  * @return {boolean}
  */
 let isSymmetric = function(root) {
-  let queue = [];
-  queue.push(root, root);
+  let queue = []
+  queue.push(root, root)
 
   while (queue.length > 0) {
-    let t1 = queue.shift();
-    let t2 = queue.shift();
+    let t1 = queue.shift()
+    let t2 = queue.shift()
 
     if (t1 === null && t2 === null) {
-      continue;
+      continue
     }
 
     if (t1 === null || t2 === null) {
-      return false;
+      return false
     }
 
     if (t1.val !== t2.val) {
-      return false;
+      return false
     }
 
-    queue.push(t1.left);
-    queue.push(t2.right);
-    queue.push(t1.right);
-    queue.push(t2.left);
+    queue.push(t1.left)
+    queue.push(t2.right)
+    queue.push(t1.right)
+    queue.push(t2.left)
   }
 
-  return true;
-};
+  return true
+}

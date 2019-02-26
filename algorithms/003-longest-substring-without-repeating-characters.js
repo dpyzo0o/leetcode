@@ -25,14 +25,14 @@
  * @return {number}
  */
 var lengthOfLongestSubstring = function(s) {
-  var max = 0;
-  var map = new Map();
+  var max = 0
+  var map = new Map()
   for (var i = 0, j = 0; j < s.length; j++) {
     if (map.has(s[j])) {
-      i = Math.max(i, map.get(s[j]) + 1);
+      i = Math.max(i, map.get(s[j]) + 1)
     }
-    map.set(s[j], j);
-    max = Math.max(max, j - i + 1);
+    map.set(s[j], j)
+    max = Math.max(max, j - i + 1)
   }
-  return max;
-};
+  return max
+}

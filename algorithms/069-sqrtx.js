@@ -11,7 +11,7 @@
  * Example 1:
  * Input: 4
  * Output: 2
- * 
+ *
  * Example 2:
  * Input: 8
  * Output: 2
@@ -27,9 +27,9 @@
  * @return {number}
  */
 var mySqrt = function(x) {
-  let t = x;
+  let t = x
   while (t * t > x) {
-    t = Math.floor((t + x / t) / 2);
+    t = Math.floor((t + x / t) / 2)
   }
-  return t;
-};
+  return t
+}

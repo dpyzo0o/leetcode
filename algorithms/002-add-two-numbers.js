@@ -35,26 +35,26 @@
  * @return {ListNode}
  */
 var addTwoNumbers = function(l1, l2) {
-  var dummyHead = new ListNode(0);
-  var cur = dummyHead;
-  var carry = 0;
+  var dummyHead = new ListNode(0)
+  var cur = dummyHead
+  var carry = 0
 
   while (l1 || l2 || carry) {
-    var v1 = 0;
-    var v2 = 0;
+    var v1 = 0
+    var v2 = 0
     if (l1) {
-      v1 = l1.val;
-      l1 = l1.next;
+      v1 = l1.val
+      l1 = l1.next
     }
     if (l2) {
-      v2 = l2.val;
-      l2 = l2.next;
+      v2 = l2.val
+      l2 = l2.next
     }
-    var sum = v1 + v2 + carry;
-    carry = Math.floor(sum / 10);
-    cur.next = new ListNode(sum % 10);
-    cur = cur.next;
+    var sum = v1 + v2 + carry
+    carry = Math.floor(sum / 10)
+    cur.next = new ListNode(sum % 10)
+    cur = cur.next
   }
-  
-  return dummyHead.next;
-};
+
+  return dummyHead.next
+}

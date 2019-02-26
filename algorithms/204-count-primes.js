@@ -22,15 +22,15 @@
  * @return {number}
  */
 var countPrimes = function(n) {
-  let count = 0;
-  let isPrime = new Array(n).fill(true);
+  let count = 0
+  let isPrime = new Array(n).fill(true)
   for (let i = 2; i < n; i++) {
     if (isPrime[i] === true) {
-      count++;
+      count++
       for (let j = 2; i * j < n; j++) {
-        isPrime[i * j] = false;
+        isPrime[i * j] = false
       }
     }
   }
-  return count;
-};
+  return count
+}

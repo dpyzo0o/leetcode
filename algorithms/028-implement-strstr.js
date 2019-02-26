@@ -33,9 +33,9 @@
 var strStr = function(haystack, needle) {
   for (var i = 0; ; i++) {
     for (var j = 0; ; j++) {
-      if (j === needle.length) return i;
-      if (i + j === haystack.length) return -1;
-      if (needle[j] !== haystack[i + j]) break;
+      if (j === needle.length) return i
+      if (i + j === haystack.length) return -1
+      if (needle[j] !== haystack[i + j]) break
     }
   }
-};
+}

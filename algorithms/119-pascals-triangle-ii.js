@@ -24,23 +24,23 @@
  */
 var getRow = function(rowIndex) {
   if (rowIndex === 0) {
-    return [1];
+    return [1]
   }
 
   if (rowIndex === 1) {
-    return [1, 1];
+    return [1, 1]
   }
 
-  let res = [[1]];
+  let res = [[1]]
   for (let i = 0; i < rowIndex; i++) {
-    let lastRow = res[i];
-    let temp = [1];
+    let lastRow = res[i]
+    let temp = [1]
     for (let j = 0; j < lastRow.length - 1; j++) {
-      temp.push(lastRow[j] + lastRow[j + 1]);
+      temp.push(lastRow[j] + lastRow[j + 1])
     }
-    temp.push(1);
-    res.push(temp);
+    temp.push(1)
+    res.push(temp)
   }
 
-  return res[rowIndex];
-};
+  return res[rowIndex]
+}

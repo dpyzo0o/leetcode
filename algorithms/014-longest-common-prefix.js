@@ -33,18 +33,18 @@
  */
 var longestCommonPrefix = function(strs) {
   if (!strs.length) {
-    return "";
+    return ''
   }
 
-  var sorted = strs.slice().sort();
-  var str1 = sorted[0];
-  var str2 = sorted[sorted.length - 1];
-  var len = Math.min(str1.length, str2.length);
-  var i = 0;
+  var sorted = strs.slice().sort()
+  var str1 = sorted[0]
+  var str2 = sorted[sorted.length - 1]
+  var len = Math.min(str1.length, str2.length)
+  var i = 0
 
   while (i < len && str1[i] === str2[i]) {
-    i++;
+    i++
   }
 
-  return str1.slice(0, i);
-};
+  return str1.slice(0, i)
+}

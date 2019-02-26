@@ -31,22 +31,22 @@
  * @return {ListNode}
  */
 var removeElements = function(head, val) {
-  const dummyHead = new ListNode(0);
-  dummyHead.next = head;
-  let cur = head;
-  let prev = dummyHead;
+  const dummyHead = new ListNode(0)
+  dummyHead.next = head
+  let cur = head
+  let prev = dummyHead
 
   while (cur !== null) {
     if (cur.val === val) {
-      prev.next = cur.next;
+      prev.next = cur.next
     } else {
-      prev = prev.next;
+      prev = prev.next
     }
-    cur = cur.next;
+    cur = cur.next
   }
 
-  return dummyHead.next;
-};
+  return dummyHead.next
+}
 
 /**
  * approach 2
@@ -55,7 +55,7 @@ var removeElements = function(head, val) {
  * @return {ListNode}
  */
 var removeElements = function(head, val) {
-  if (head === null) return null;
-  head.next = removeElements(head.next, val);
-  return head.val === val ? head.next : head;
-};
+  if (head === null) return null
+  head.next = removeElements(head.next, val)
+  return head.val === val ? head.next : head
+}

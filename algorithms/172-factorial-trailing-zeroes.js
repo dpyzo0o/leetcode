@@ -7,7 +7,7 @@
  *
  * Example 1:
  *
- * Input: 3 
+ * Input: 3
  * Output: 0
  * Explanation: 3! = 6, no trailing zero.
  *
@@ -29,5 +29,5 @@
  * @return {number}
  */
 var trailingZeroes = function(n) {
-  return n === 0 ? 0 : ~~(n / 5) + trailingZeroes(~~(n / 5));
-};
+  return n === 0 ? 0 : ~~(n / 5) + trailingZeroes(~~(n / 5))
+}

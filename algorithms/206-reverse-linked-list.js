@@ -30,18 +30,18 @@
  * @return {ListNode}
  */
 var reverseList = function(head) {
-  let cur = head;
-  let prev = null;
+  let cur = head
+  let prev = null
 
   while (cur !== null) {
-    let temp = cur.next;
-    cur.next = prev;
-    prev = cur;
-    cur = temp;
+    let temp = cur.next
+    cur.next = prev
+    prev = cur
+    cur = temp
   }
 
-  return prev;
-};
+  return prev
+}
 
 /**
  * approach 2
@@ -49,9 +49,9 @@ var reverseList = function(head) {
  * @return {ListNode}
  */
 var reverseList = function(head) {
-  if (head === null || head.next === null) return head;
-  let p = reverseList(head.next);
-  head.next.next = head;
-  head.next = null;
-  return p;
-};
+  if (head === null || head.next === null) return head
+  let p = reverseList(head.next)
+  head.next.next = head
+  head.next = null
+  return p
+}

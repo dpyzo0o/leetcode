@@ -26,11 +26,11 @@
  * @return {string}
  */
 var reverseString = function(s) {
-  let res = '';
+  let res = ''
 
   for (let i = 0; i < s.length; i++) {
-    res = s[i] + res;
+    res = s[i] + res
   }
 
-  return res;
-};
+  return res
+}

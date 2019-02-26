@@ -40,11 +40,11 @@
  */
 var isUgly = function(num) {
   while (num !== 1) {
-    let n = num;
-    num = num % 2 ? num : num / 2;
-    num = num % 3 ? num : num / 3;
-    num = num % 5 ? num : num / 5;
-    if (num === n) return false;
+    let n = num
+    num = num % 2 ? num : num / 2
+    num = num % 3 ? num : num / 3
+    num = num % 5 ? num : num / 5
+    if (num === n) return false
   }
-  return true;
-};
+  return true
+}

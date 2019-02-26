@@ -26,27 +26,27 @@
  * @return {string}
  */
 var addBinary = function(a, b) {
-  let arrA = a.split('');
-  let arrB = b.split('');
-  let len = Math.max(arrA.length, arrB.length);
-  let carry = 0;
-  let res = '';
+  let arrA = a.split('')
+  let arrB = b.split('')
+  let len = Math.max(arrA.length, arrB.length)
+  let carry = 0
+  let res = ''
 
   while (len-- > 0 || carry > 0) {
-    let aa = arrA.pop();
-    let bb = arrB.pop();
+    let aa = arrA.pop()
+    let bb = arrB.pop()
 
     if (aa) {
-      carry += parseInt(aa);
+      carry += parseInt(aa)
     }
 
     if (bb) {
-      carry += parseInt(bb);
+      carry += parseInt(bb)
     }
 
-    res = (carry % 2) + res;
-    carry = carry > 1 ? 1 : 0;
+    res = (carry % 2) + res
+    carry = carry > 1 ? 1 : 0
   }
 
-  return res;
-};
+  return res
+}

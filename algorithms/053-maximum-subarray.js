@@ -24,10 +24,10 @@
  * @return {number}
  */
 var maxSubArray = function(nums) {
-  var maxCurrent = maxGlobal = nums[0];
+  var maxCurrent = (maxGlobal = nums[0])
   for (var i = 1; i < nums.length; i++) {
-    maxCurrent = Math.max(nums[i], maxCurrent + nums[i]);
-    maxGlobal = Math.max(maxGlobal, maxCurrent);
+    maxCurrent = Math.max(nums[i], maxCurrent + nums[i])
+    maxGlobal = Math.max(maxGlobal, maxCurrent)
   }
-  return maxGlobal;
-};
+  return maxGlobal
+}

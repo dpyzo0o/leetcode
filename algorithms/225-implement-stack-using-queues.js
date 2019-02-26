@@ -12,13 +12,13 @@
  * Example:
  *
  * MyStack stack = new MyStack();
- * 
+ *
  * stack.push(1);
- * stack.push(2);  
+ * stack.push(2);
  * stack.top();   // returns 2
  * stack.pop();   // returns 2
  * stack.empty(); // returns false
- * 
+ *
  * Notes:
  * - You must use only standard operations of a queue -- which means only push
  *   to back, peek/pop from front, size, and is empty operations are valid.
@@ -38,8 +38,8 @@
  * Initialize your data structure here.
  */
 var MyStack = function() {
-  this.queue = [];
-};
+  this.queue = []
+}
 
 /**
  * Push element x onto stack.
@@ -47,35 +47,35 @@ var MyStack = function() {
  * @return {void}
  */
 MyStack.prototype.push = function(x) {
-  this.queue.push(x);
+  this.queue.push(x)
   for (let i = 1; i < this.queue.length; i++) {
-    this.queue.push(this.queue.shift());
+    this.queue.push(this.queue.shift())
   }
-};
+}
 
 /**
  * Removes the element on top of the stack and returns that element.
  * @return {number}
  */
 MyStack.prototype.pop = function() {
-  return this.queue.shift();
-};
+  return this.queue.shift()
+}
 
 /**
  * Get the top element.
  * @return {number}
  */
 MyStack.prototype.top = function() {
-  return this.queue[0];
-};
+  return this.queue[0]
+}
 
 /**
  * Returns whether the stack is empty.
  * @return {boolean}
  */
 MyStack.prototype.empty = function() {
-  return this.queue.length === 0;
-};
+  return this.queue.length === 0
+}
 
 /**
  * Your MyStack object will be instantiated and called as such:

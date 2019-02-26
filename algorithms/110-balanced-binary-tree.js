@@ -50,15 +50,19 @@
  * @return {boolean}
  */
 var isBalanced = function(root) {
-  if (root === null) return true;
+  if (root === null) return true
 
-  const left = depth(root.left);
-  const right = depth(root.right);
-  
-  return Math.abs(left - right) <= 1 && isBalanced(root.left) && isBalanced(root.right);
-};
+  const left = depth(root.left)
+  const right = depth(root.right)
+
+  return (
+    Math.abs(left - right) <= 1 &&
+    isBalanced(root.left) &&
+    isBalanced(root.right)
+  )
+}
 
 function depth(root) {
-  if (root === null) return 0;
-  return Math.max(depth(root.left), depth(root.right)) + 1;
+  if (root === null) return 0
+  return Math.max(depth(root.left), depth(root.right)) + 1
 }

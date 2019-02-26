@@ -31,23 +31,23 @@
  */
 var generate = function(numRows) {
   if (numRows === 0) {
-    return [];
+    return []
   }
 
   if (numRows === 1) {
-    return [[1]];
+    return [[1]]
   }
 
-  let res = [[1]];
+  let res = [[1]]
   for (let i = 1; i < numRows; i++) {
-    let lastRow = res[i - 1];
-    let temp = [1];
+    let lastRow = res[i - 1]
+    let temp = [1]
     for (let j = 0; j < lastRow.length - 1; j++) {
-      temp.push(lastRow[j] + lastRow[j + 1]);
+      temp.push(lastRow[j] + lastRow[j + 1])
     }
-    temp.push(1);
-    res.push(temp);
+    temp.push(1)
+    res.push(temp)
   }
 
-  return res;
-};
+  return res
+}

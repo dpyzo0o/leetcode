@@ -32,15 +32,15 @@
  * @return {ListNode}
  */
 var deleteDuplicates = function(head) {
-  let res = head;
+  let res = head
 
   while (head !== null && head.next !== null) {
     if (head.val === head.next.val) {
-      head.next = head.next.next;
+      head.next = head.next.next
     } else {
-      head = head.next;
+      head = head.next
     }
   }
 
-  return res;
-};
+  return res
+}

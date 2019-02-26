@@ -30,22 +30,22 @@
  * @return {boolean}
  */
 var isHappy = function(n) {
-  const set = new Set();
-  set.add(n);
+  const set = new Set()
+  set.add(n)
 
   while (n !== 1) {
-    let sum = 0;
-    
+    let sum = 0
+
     while (n) {
-      sum += Math.pow(n % 10, 2);
-      n = ~~(n / 10);
+      sum += Math.pow(n % 10, 2)
+      n = ~~(n / 10)
     }
 
-    if (set.has(sum)) return false;
+    if (set.has(sum)) return false
 
-    set.add(sum);
-    n = sum;
+    set.add(sum)
+    n = sum
   }
 
-  return true;
-};
+  return true
+}

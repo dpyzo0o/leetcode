@@ -45,21 +45,21 @@
  * @return {number}
  */
 var romanToInt = function(s) {
-  var result = 0;
+  var result = 0
 
   for (var i = 0; i < s.length - 1; i++) {
-    var current = toNum[s[i]];
-    var next = toNum[s[i + 1]];
+    var current = toNum[s[i]]
+    var next = toNum[s[i + 1]]
 
     if (current < next) {
-      result -= current;
+      result -= current
     } else {
-      result += current;
+      result += current
     }
   }
 
-  return result + toNum[s[s.length - 1]];
-};
+  return result + toNum[s[s.length - 1]]
+}
 
 var toNum = {
   M: 1000,
@@ -69,4 +69,4 @@ var toNum = {
   X: 10,
   V: 5,
   I: 1
-};
+}

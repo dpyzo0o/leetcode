@@ -28,18 +28,18 @@
  * @return {boolean}
  */
 var isAnagram = function(s, t) {
-  if (s.length !== t.length) return false;
+  if (s.length !== t.length) return false
 
-  let ms = {};
-  let mt = {};
+  let ms = {}
+  let mt = {}
   for (let i = 0; i < s.length; i++) {
-    ms[s[i]] = (ms[s[i]] || 0) + 1;
-    mt[t[i]] = (mt[t[i]] || 0) + 1;
+    ms[s[i]] = (ms[s[i]] || 0) + 1
+    mt[t[i]] = (mt[t[i]] || 0) + 1
   }
 
   for (let i = 0; i < s.length; i++) {
-    if (ms[s[i]] !== mt[s[i]]) return false;
+    if (ms[s[i]] !== mt[s[i]]) return false
   }
 
-  return true;
-};
+  return true
+}

@@ -41,12 +41,12 @@
  * @return {number}
  */
 var titleToNumber = function(s) {
-  let res = 0;
-  let len = s.length;
+  let res = 0
+  let len = s.length
 
   for (let i = 0; i < len; i++) {
-    res += (s[i].charCodeAt(0) - 64) * Math.pow(26, len - i - 1);
+    res += (s[i].charCodeAt(0) - 64) * Math.pow(26, len - i - 1)
   }
 
-  return res;
-};
+  return res
+}

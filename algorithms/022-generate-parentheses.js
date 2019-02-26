@@ -27,23 +27,23 @@
  * @return {string[]}
  */
 var generateParenthesis = function(n) {
-  let res = [];
-  let str = '';
-  backtrack(res, str, 0, 0, n);
-  return res;
-};
+  let res = []
+  let str = ''
+  backtrack(res, str, 0, 0, n)
+  return res
+}
 
 const backtrack = function(res, str, left, right, n) {
   if (str.length === 2 * n) {
-    res.push(str);
-    return;
+    res.push(str)
+    return
   }
 
   if (left < n) {
-    backtrack(res, str + '(', left + 1, right, n);
+    backtrack(res, str + '(', left + 1, right, n)
   }
 
   if (left > right) {
-    backtrack(res, str + ')', left, right + 1, n);
+    backtrack(res, str + ')', left, right + 1, n)
   }
-};
+}

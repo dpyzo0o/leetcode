@@ -44,19 +44,19 @@
 var levelOrderBottom = function(root) {
   const dfs = (array, node, level) => {
     if (node === null) {
-      return null;
+      return null
     }
 
     if (array.length < level + 1) {
-      array.push([]);
+      array.push([])
     }
 
-    array[level].push(node.val);
-    dfs(array, node.left, level + 1);
-    dfs(array, node.right, level + 1);
-  };
+    array[level].push(node.val)
+    dfs(array, node.left, level + 1)
+    dfs(array, node.right, level + 1)
+  }
 
-  let r = [];
-  dfs(r, root, 0);
-  return r.reverse();
-};
+  let r = []
+  dfs(r, root, 0)
+  return r.reverse()
+}

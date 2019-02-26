@@ -28,16 +28,16 @@
  * @return {boolean}
  */
 var containsDuplicate = function(nums) {
-  if (nums.length < 2) return false;
+  if (nums.length < 2) return false
 
-  let set = new Set();
+  let set = new Set()
   for (let i = 0; i < nums.length; i++) {
     if (!set.has(nums[i])) {
-      set.add(nums[i]);
+      set.add(nums[i])
     } else {
-      return true;
+      return true
     }
   }
 
-  return false;
-};
+  return false
+}
