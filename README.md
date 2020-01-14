@@ -1,3 +1,3 @@
 # LeetCode
 
-Irregularly upload my LeetCode solutions.
+My LeetCode solutions.
